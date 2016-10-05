@@ -1,0 +1,31 @@
+<div class="section">
+  <h1>STOCK DATA</h1>
+  <md-content>
+    <form ng-submit="$event.preventDefault()" name="searchForm">
+      <div layout-gt-sm="row">
+        <md-autocomplete flex md-input-name="autocompleteField" md-selected-item="selectedItem" md-search-text="searchText" md-items="item in querySearch(searchText)" md-item-text="item.display" md-floating-label="Search Name">
+          <md-item-template>
+            <span md-highlight-text="searchText">{{item.display}}</span>
+          </md-item-template>
+        </md-autocomplete>
+      </div>
+    </form>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-class-odd="'active'" ng-repeat="(key, value) in stock | exactName: selectedItem | partialName: searchText">
+          <td>{{key}}</td>
+          <td>{{value}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </md-content>
+</div>
+<div layout="row" class="center-page" layout-sm="column" layout-align="space-around">
+  <md-progress-circular ng-show="isBusy" class="md-accent" md-mode="indeterminate"></md-progress-circular>
+</div>

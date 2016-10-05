@@ -1,0 +1,41 @@
+/* Styles go here */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 40px;
+  font-family: "Open Sans";
+}
+ .footer {
+  /* position: fixed;
+  bottom: 0; */
+  width: 100%;
+  padding-top: 10px;
+  /* Set the fixed height of the footer here */
+  height: 40px;
+  background-color: #333;
+}
+.footer .container {
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.center-page{
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.fabToolbardemoBasicUsage md-fab-toolbar.md-left md-fab-trigger.align-with-text {
+  left: 7px;
+}
+.content .entry {
+  background-color: #fff;
+}
+.entry {
+  display: block;
+  margin-bottom: 40px;
+  padding: 50px 60px;
+}

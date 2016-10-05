@@ -1,0 +1,23 @@
+<h1>ANALYTIC PAGE</h1>
+<div>
+  <md-content class="md-padding">
+    <md-tabs md-dynamic-height md-border-bottom>
+      <md-tab label="Current Stock">
+        <md-content class="md-padding">
+          <h1 class="md-display-2"></h1>
+          <p><img src="http://ichart.finance.yahoo.com/w?s=ffiv" /></p>
+        </md-content>
+      </md-tab>
+      <md-tab label="STOCK COMPARISION">
+        <md-content class="md-padding" layout="column">
+          <md-input-container>
+            <label>FFIV Compare To:</label>
+          </md-input-container>
+          <md-chips ng-model="stockSymbols" placeholder="Enter a symbol" delete-button-label="Remove symbol" delete-hint="Press delete to remove a symbol" secondary-placeholder="+StockSymbol">
+          </md-chips>
+          <img ng-src="http://chart.finance.yahoo.com/z?s=FFIV&t=6m&q=l&l=on&z=l&p=m50,e100,v&a=p12,p&c=%5{{stockSymbols.join(',')}}" />
+        </md-content>
+      </md-tab>
+    </md-tabs>
+  </md-content>
+</div>
